@@ -2,3 +2,41 @@
   font-family: "Raleway";
   font-weight: 600;
 }
+
+@media only screen and (max-width: 600px) {
+  .headers {
+    display: none !important;
+  }
+  .headers2 {
+    display: none !important;
+  }
+  .navmob {
+    display: block !important;
+  }
+  h1 {
+    font-size: calc(1.325rem + 0.9vw) !important;
+  }
+  .icon {
+    margin-bottom: 50px;
+  }
+  .icon > span > img {
+    margin-bottom: 16px !important;
+  }
+  .fw {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .headers,
+  .headers2 {
+    display: block;
+  }
+  .navmob {
+    display: none !important;
+  }
+}
+.icon {
+  /* gradient and fallback color */
+  fill: url(#my-cool-gradient) #447799;
+}

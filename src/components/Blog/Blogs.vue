@@ -2,7 +2,7 @@
   <div>
     <div class="container">
       <div class="row">
-        <div class="col-sm-6">
+        <div class="col-md-6" v-scrollanimation2>
           <h1>Kembangkan bisnis anda dengan beragam layanan delivery</h1>
           <h6>
             Cukup satu integrasi, bisnis anda terkoneksi dengan berbagai pilihan
@@ -15,7 +15,7 @@
             <img src="../../assets/bawah.png" alt="" />
           </span>
         </div>
-        <div class="col-sm-6">
+        <div class="col-md-6" v-scrollanimation>
           <span class="img"><img src="../../assets/home.png" alt="" /> </span>
         </div>
       </div>
@@ -31,11 +31,11 @@
   };
 </script>
 
-<style>
+<style lang="css" scoped>
   h1 {
     color: #3e6fe1;
-    font-size: 52px !important;
-    font-weight: 600 !important;
+    font-size: 52px;
+    font-weight: 700;
   }
   h6 {
     font-weight: 600 !important;

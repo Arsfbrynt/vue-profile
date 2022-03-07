@@ -2,14 +2,15 @@
   <div>
     <div class="container">
       <div class="navbar">
-        <vs-tabs alignment="right" :color="colorx">
+        <vs-tabs alignment="right" class="headers">
           >
           <span>
             <button>
               <img src="../assets/logo-600x200-1.png" class="logo" />
             </button>
           </span>
-          <header>
+
+          <header id="header">
             <vs-tab label="Home" @click="goto('home')">
               <div></div>
             </vs-tab>
@@ -26,18 +27,57 @@
               <div></div>
             </vs-tab>
 
-            <vs-tab label="🧑">
+            <!-- <vs-tab label="🧑">
               <label>
                 <img src="../assets/icon/user.png" alt="" />
               </label>
-            </vs-tab>
+            </vs-tab> -->
           </header>
         </vs-tabs>
+
+        <div class="navmob">
+          <header class="headert">
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"
+              ><span class="navicon"></span>
+              <img src="../assets/logo-600x200-1.png" alt=""
+            /></label>
+
+            <ul class="menu">
+              <li>
+                <a href="#" @click="goto('home')">Home</a>
+              </li>
+              <li>
+                <a href="#" @click="goto('benefit')">Benefit</a>
+              </li>
+              <li><a href="#" @click="goto('about')">About</a></li>
+              <li><a href="#" @click="goto('feat')">Features</a></li>
+              <li><a href="#" @click="goto('contact')">Contact</a></li>
+              <li><a href="#">Login</a></li>
+              <li><a href="#">Register</a></li>
+            </ul>
+          </header>
+        </div>
+
         <div class="component">
           <div class="div" ref="home">
             <Blogs />
           </div>
-          <div class="div" ref="benefit">
+
+          <div class="fw" ref="benefit">
+            <div class="custom-shape-divider-bottom-1646585658">
+              <svg
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1200 120"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
+                  class="shape-fill"
+                ></path>
+              </svg>
+            </div>
             <Benefit />
           </div>
           <div class="div" ref="about"><About /></div>
@@ -45,7 +85,7 @@
         </div>
       </div>
     </div>
-    <span class="bg" ref="contact"><Contact /></span>
+    <div class="bg2" ref="contact"><Contact /></div>
   </div>
 </template>
 
@@ -58,6 +98,7 @@
       Features,
       Contact,
     },
+
     name: "Navbar",
     props: {
       msg: String,
@@ -88,10 +129,17 @@
   });
 </script>
 <style scoped>
+  .navlog {
+    position: absolute;
+    top: 0;
+    width: 200px;
+    right: 20px;
+    float: right;
+  }
   .bg {
     margin: 0 !important;
-    width: 97.8%;
-    margin-left: -40px !important;
+    /* width: 97.8%; */
+    left: 0px !important;
   }
   button {
     border: none;
@@ -102,11 +150,21 @@
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
   }
+  .fw {
+    width: 100vw !important;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: 0vw;
+    min-height: 700px;
+  }
+
   .vs-tabs {
     position: fixed;
     left: 0;
     top: 0;
-    right: 200px !important;
+    /* right: 200px !important; */
     width: 100%;
     z-index: 200;
     background-color: white;
@@ -116,8 +174,9 @@
     margin-top: 100px;
   }
   .navbar > div:first-child {
-    padding-top: 20px;
-    margin: 0 20px;
+    margin: 0;
+    margin-top: 40px;
+    padding-top: 0 !important;
   }
   .logo {
     position: absolute;
@@ -149,7 +208,6 @@
     width: 100%;
   }
   .component > div {
-    /* height: 1000px; */
     min-height: 700px;
     width: 100%;
     margin-bottom: 40px;
@@ -160,5 +218,27 @@
     padding: unset !important;
     position: absolute !important;
     width: 100%;
+  }
+  .custom-shape-divider-bottom-1646585658 {
+    position: absolute;
+    top: -255px;
+    z-index: -1;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  .custom-shape-divider-bottom-1646585658 svg {
+    position: relative;
+    display: block;
+    width: calc(122% + 1.3px);
+    height: 256px;
+    transform: rotateY(180deg);
+  }
+
+  .custom-shape-divider-bottom-1646585658 .shape-fill {
+    fill: #ebf0fc;
   }
 </style>

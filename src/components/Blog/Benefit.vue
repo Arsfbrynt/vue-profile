@@ -1,8 +1,8 @@
 <template>
-  <div class="container bgbenf">
-    <h2 class="center">Kenapa menggunakan Zevalink</h2>
+  <div class="bgbenf">
+    <h2 class="center" v-scrollanimation>Kenapa menggunakan Zevalink</h2>
     <div class="row center">
-      <div class="col-md-2">
+      <div class="col-md-2" v-scrollanimation2>
         <div class="icon">
           <span>
             <img src="@/assets/icon/basic-chronometer.svg" alt="" />
@@ -13,7 +13,7 @@
           >
         </div>
       </div>
-      <div class="col-md-2">
+      <div class="col-md-2" v-scrollanimation>
         <div class="icon">
           <span>
             <img src="@/assets/icon/software-layers2.svg" alt="" />
@@ -26,7 +26,7 @@
           >
         </div>
       </div>
-      <div class="col-md-2">
+      <div class="col-md-2" v-scrollanimation2>
         <div class="icon">
           <span>
             <img src="@/assets/icon/ecommerce.svg" alt="" />
@@ -37,7 +37,7 @@
           </span>
         </div>
       </div>
-      <div class="col-md-2">
+      <div class="col-md-2" v-scrollanimation>
         <div class="icon">
           <span>
             <img src="@/assets/icon/expandalt.svg" alt="" />
@@ -49,7 +49,7 @@
           </span>
         </div>
       </div>
-      <div class="col-md-2">
+      <div class="col-md-2" v-scrollanimation2>
         <div class="icon">
           <span>
             <img
@@ -80,9 +80,11 @@
   h2.center {
     margin-bottom: 100px;
     color: #3e6fe1;
+    font-weight: 600;
   }
   .bgbenf {
-    background-color: aliceblue;
+    background-color: #ebf0fc;
+    padding: 50px 0;
   }
   .icon > h5 {
     font-weight: 600;

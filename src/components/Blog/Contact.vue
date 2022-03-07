@@ -1,7 +1,7 @@
 <template>
   <div class="bg">
     <div class="col-md-12">
-      <div class="box-link">
+      <div class="box-link" v-scrollanimation>
         <h6>Zevalink</h6>
         <p>
           Jl. Pecandran No.14, RT.6/RW.5 Rawa Baru, Kec. Kby. Baru, Kota Jakarta
@@ -27,7 +27,7 @@
     padding: 0 !important;
     position: absolute !important;
     height: 700px;
-    width: 100%;
+    width: 100% !important;
     background-position: center bottom;
     background-repeat: no-repeat;
     background-image: url("https://source.unsplash.com/featured/1800x700/daily/?working");
@@ -35,7 +35,7 @@
   .box-link {
     margin-top: 20% !important;
     width: 260px;
-    background-color: blue;
+    background-color: #5181ef;
     color: white;
     height: 295px;
     position: flex;

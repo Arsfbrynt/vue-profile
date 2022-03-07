@@ -9,9 +9,9 @@
       </div>
     </div>
   </div> -->
-  <b-container fluid class="bv-example-row">
+  <b-container fluid class="bv-example-row" v-scrollanimation2>
     <b-row>
-      <b-col md="6" offset-md="3">
+      <b-col sm="12" md="6" offset-md="3" v-scrollanimation>
         <h3 class="center">Integrasi API</h3>
         <span class="line center"></span>
         <span class="text"
@@ -31,7 +31,11 @@
       :margin="90"
       :nav="false"
       :loop="true"
-      :items="3"
+      :responsive="{
+        0: { items: 1 },
+        601: { items: 3 },
+      }"
+      v-scrollanimation
     >
       <span>
         <div class="box" id="home">
@@ -100,13 +104,14 @@
     components: { carousel },
   };
 </script>
-<style lang="css">
+<style>
   h3.center {
     font-weight: 600;
     color: #3e6fe1;
   }
   .text {
     opacity: 0.75;
+    text-align: center !important;
   }
   .line {
     width: 120px;
@@ -146,13 +151,15 @@
     border: none;
     border-radius: 10px;
     background-color: #3e6fe1;
-    color: #fff !important;
     transition: all 0.5s cubic-bezier(0.25, 1, 0.2, 1);
     padding: 20px 10px;
     background-blend-mode: multiply;
     background-position-x: center;
     background-position-y: center;
     background-size: cover;
+  }
+  .box:hover * {
+    color: #fff !important;
   }
   #home:hover {
     background-image: url(../../assets/icon/address.jpg);
@@ -165,5 +172,8 @@
   }
   #maps:hover {
     background-image: url(../../assets/icon/api.jpg);
+  }
+  .offset-md-3 {
+    text-align: center;
   }
 </style>

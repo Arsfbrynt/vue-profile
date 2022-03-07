@@ -1,46 +1,12 @@
 <template>
   <b-container fluid class="bv-example-row">
     <b-row class="m10">
-      <b-col md="6" offset-md="3">
+      <b-col sm="12" md="6" offset-md="3" v-scrollanimation>
         <h2>Komparasi Metode Konvensional dengan <u>Zevalink</u></h2>
       </b-col>
     </b-row>
     <b-row>
-      <b-col md="6">
-        <b-card title="Dengan Zevalink" class="mb-2 blue">
-          <span>RECOMMENDED</span>
-          <b-card-text>
-            <ul class="ilang">
-              <li><fa-icon :icon="['fas', 'check']" /> Multiple Partners</li>
-              <li><fa-icon :icon="['fas', 'check']" /> Single Dashboard</li>
-              <li><fa-icon :icon="['fas', 'check']" />Pelacakan Pesanan</li>
-              <li>
-                <fa-icon :icon="['fas', 'check']" />Satu Dokumentasi Integrasi
-              </li>
-              <li>
-                <fa-icon :icon="['fas', 'check']" /> Satu Kali Proses Integrasi
-              </li>
-            </ul>
-          </b-card-text>
-
-          <b-button
-            href="https://zeva.co.id/client-dashboard/demo1/pages/auth/register-plan.html"
-            variant="primary"
-            class="center"
-          >
-            <div>
-              <b-row>
-                <b-col sm="6"> <span>Sign Up Now</span></b-col>
-                <b-col sm="6"
-                  ><span>
-                    <fa-icon :icon="['fas', 'long-arrow-alt-right']" /> </span
-                ></b-col>
-              </b-row>
-            </div>
-          </b-button>
-        </b-card>
-      </b-col>
-      <b-col md="6">
+      <b-col sm="12" md="6" v-scrollanimation>
         <b-card title="Metode Konvensional" class="green">
           <b-card-text>
             <ul class="ilang2">
@@ -49,22 +15,56 @@
                 <fa-icon :icon="['fas', 'circle-xmark']" /> Single Dashboard
               </li>
               <li>
-                <fa-icon :icon="['fas', 'circle-xmark']" />Pelacakan Pesanan
+                <fa-icon :icon="['fas', 'circle-xmark']" /> Pelacakan Pesanan
               </li>
               <li>
-                <fa-icon :icon="['fas', 'circle-xmark']" />Satu Dokumentasi
+                <fa-icon :icon="['fas', 'circle-xmark']" /> Satu Dokumentasi
                 Integrasi
               </li>
               <li>
-                <fa-icon :icon="['fas', 'circle-xmark']" />Satu Kali Proses
+                <fa-icon :icon="['fas', 'circle-xmark']" /> Satu Kali Proses
                 Integrasi
               </li>
             </ul>
           </b-card-text>
         </b-card>
       </b-col>
+      <b-col sm="12" md="6" v-scrollanimation2>
+        <b-card title="Dengan Zevalink" class="mb-2 blue">
+          <span></span>
+          <b-card-text>
+            <ul class="ilang">
+              <li><fa-icon :icon="['fas', 'check']" /> Multiple Partners</li>
+              <li><fa-icon :icon="['fas', 'check']" /> Single Dashboard</li>
+              <li><fa-icon :icon="['fas', 'check']" /> Pelacakan Pesanan</li>
+              <li>
+                <fa-icon :icon="['fas', 'check']" /> Satu Dokumentasi Integrasi
+              </li>
+              <li>
+                <fa-icon :icon="['fas', 'check']" /> Satu Kali Proses Integrasi
+              </li>
+            </ul>
+          </b-card-text>
+          <br />
+          <b-button
+            href="https://zeva.co.id/client-dashboard/demo1/pages/auth/register-plan.html"
+            variant="primary"
+            class="center"
+          >
+            <div>
+              <b-row>
+                <b-col sm="8"> <span>Sign Up Now</span></b-col>
+                <b-col sm="4"
+                  ><span>
+                    <fa-icon :icon="['fas', 'long-arrow-alt-right']" /> </span
+                ></b-col>
+              </b-row>
+            </div>
+          </b-button>
+        </b-card>
+      </b-col>
       <br />
-      <b-col md="6">
+      <b-col sm="12" md="6" v-scrollanimation>
         <div class="featbot">
           <h5>Pilihan Zevalink yang tersedia</h5>
           <p>
@@ -76,7 +76,7 @@
           </p>
         </div>
       </b-col>
-      <b-col md="6">
+      <b-col sm="12" md="6" v-scrollanimation>
         <div class="featbot">
           <h5>Kriteria Integrasi Dengan Zevalink</h5>
           <p>
@@ -122,6 +122,12 @@
   .ilang2 > li {
     opacity: 0.5;
   }
+  .ilang > li,
+  .ilang2 > li {
+    font-size: 14px;
+    line-height: 35px;
+    color: #444;
+  }
   .ilang2 > li:first-child {
     opacity: 1;
   }
@@ -139,9 +145,14 @@
     border-radius: 20px;
     transition: box-shadow 0.2s linear;
     -webkit-transition: box-shadow 0.2s linear;
+    padding: 50px !important;
+    width: 350px;
   }
   .green {
     border: none !important;
+    float: right;
+    width: 300px !important;
+    right: 0px;
   }
   .green::before {
     content: "";
@@ -154,8 +165,7 @@
     left: 0px;
   }
   .blue {
-    float: right;
-    width: 50% !important;
+    float: left;
     padding: 20px;
     padding-top: 60px;
   }
@@ -165,7 +175,8 @@
     top: 0px;
     width: 100% !important;
     left: 0;
-    padding: 10px;
+    /* padding: 10px; */
+    height: 7px;
     text-align: center;
     color: white;
   }
@@ -173,7 +184,6 @@
     font-size: 14px;
   }
   .green {
-    margin-right: 200px;
     display: inline-block;
     margin-top: 110px;
   }
@@ -204,5 +214,15 @@
   }
   .featbot {
     margin-top: 40px;
+    color: #444;
+  }
+  .featbot > h5 {
+    font-weight: 600 !important;
+    margin-bottom: 30px;
+  }
+  .featbot > p {
+    opacity: 0.75;
+    font-size: 14px;
+    line-height: 25px;
   }
 </style>

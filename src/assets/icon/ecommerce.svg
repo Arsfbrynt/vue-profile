@@ -20,4 +20,19 @@
 		<polygon points="52,12 50,12 50,2 40,2 40,0 51,0 52,1 		"/>
 	</g>
 </g>
+<defs>
+      <linearGradient id="Gradient2" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#bba8f4" />
+        <stop offset="20%" stop-color="#a595d8" />
+        <stop offset="40%" stop-color="#8979ba" />
+        <stop offset="60%" stop-color="#7363a5" />
+        <stop offset="80%" stop-color="#605091" />
+        <stop offset="100%" stop-color="#3e3168" />
+      </linearGradient>
+      <linearGradient id="Gradient2.5" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#3e3168" />
+        <stop offset="60%" stop-color="#7363a5" />
+        <stop offset="90%" stop-color="#8979ba" />
+      </linearGradient>
+    </defs> 
 </svg>

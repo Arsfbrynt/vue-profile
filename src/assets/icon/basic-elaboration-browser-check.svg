@@ -3,6 +3,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+
 <g>
 	<path d="M0,58h64V6H0V58z M2,56V16h60v40H2z M62,8v6H2V8H62z"/>
 	<rect x="6" y="10" width="4" height="2"/>
@@ -10,4 +11,21 @@
 	<rect x="22" y="10" width="4" height="2"/>
 	<polygon points="30,40.586 23.707,34.293 22.293,35.854 29.293,43 30.707,43 43.707,29.854 42.293,28.366 	"/>
 </g>
+
+  <defs>
+      <linearGradient id="Gradient2" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#bba8f4" />
+        <stop offset="20%" stop-color="#a595d8" />
+        <stop offset="40%" stop-color="#8979ba" />
+        <stop offset="60%" stop-color="#7363a5" />
+        <stop offset="80%" stop-color="#605091" />
+        <stop offset="100%" stop-color="#3e3168" />
+      </linearGradient>
+      <linearGradient id="Gradient2.5" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#3e3168" />
+        <stop offset="60%" stop-color="#7363a5" />
+        <stop offset="90%" stop-color="#8979ba" />
+      </linearGradient>
+    </defs> 
+    <!--End Apple Gradient-->
 </svg>

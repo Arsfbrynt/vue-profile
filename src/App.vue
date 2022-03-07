@@ -1,12 +1,13 @@
 <template>
   <div>
     <div class="container">
-      <div class="accounted">
+      <!-- <div class="accounted">
         <a
           href="https://zeva.co.id/client-dashboard/demo1/pages/auth/register-plan.html"
           >Don’t Have Account? Sign Up Now</a
         >
-      </div>
+      </div> -->
+      <div><NavbarTop msg="" /></div>
       <div><Navbar msg="" /></div>
       <div id="app">
         <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
@@ -19,15 +20,12 @@
 
 <script>
   import Navbar from "./components/Navbar.vue";
-  // import Content from "./components/Content.vue";
-  // import Compon from "./components/Compon.vue";
-
-  // import HelloWorld from './components/HelloWorld.vue'
-
+  import NavbarTop from "./components/NavbarTop.vue";
   export default {
     name: "App",
     components: {
       Navbar,
+      NavbarTop,
     },
   };
 </script>
@@ -47,7 +45,7 @@
     padding-left: 0;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
-    padding-right: 150px;
+    padding-right: 30px;
   }
   .con-slot-tabs {
     height: 0 !important;
@@ -62,5 +60,26 @@
   }
   .vs-tabs--li > button > span:hover {
     color: #00ab66;
+  }
+  .before-enter {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 2s ease-out;
+  }
+  .before-enter2 {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 1.2s cubic-bezier(0.41, 0.01, 0.57, 1.61);
+  }
+  /* 
+    If the element intersects with the viewport, the before-enter class is added.
+  */
+  .enter2 {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  .enter {
+    opacity: 1;
+    transform: translateX(0px);
   }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container">
+    <div>
       <div class="navbar">
         <vs-tabs alignment="right" class="headers">
           >
@@ -80,7 +80,7 @@
             </div>
             <Benefit />
           </div>
-          <div class="div" ref="about"><About /></div>
+          <div class="div container" ref="about"><About /></div>
           <div class="div" ref="feat"><Features /></div>
         </div>
       </div>

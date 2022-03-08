@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container" style="height: 5px">
+    <div style="height: 5px">
       <div class="navbar">
         <vs-tabs alignment="right" class="headers2">
           >

@@ -1,7 +1,7 @@
 <template>
   <div class="bgbenf">
     <h2 class="center" v-scrollanimation>Kenapa menggunakan Zevalink</h2>
-    <div class="row center">
+    <div class="row center" style="margin: 0 !important">
       <div class="col-md-2" v-scrollanimation2>
         <div class="icon">
           <span>
@@ -52,10 +52,7 @@
       <div class="col-md-2" v-scrollanimation2>
         <div class="icon">
           <span>
-            <img
-              src="@/assets/icon/basic-elaboration-browser-check.svg"
-              alt=""
-            />
+            <Bebc />
           </span>
           <h5>Single Dashboard</h5>
           <span class="body"
@@ -68,10 +65,15 @@
 </template>
 
 <script>
+  import Bebc from "@/assets/icon/basic-elaboration-browser-check.svg";
+
   export default {
     name: "Benefit",
     props: {
       msg: String,
+    },
+    components: {
+      Bebc,
     },
   };
 </script>

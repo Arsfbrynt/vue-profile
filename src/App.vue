@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container">
+    <div>
       <!-- <div class="accounted">
         <a
           href="https://zeva.co.id/client-dashboard/demo1/pages/auth/register-plan.html"

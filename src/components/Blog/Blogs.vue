@@ -15,7 +15,7 @@
             <img src="../../assets/bawah.png" alt="" />
           </span>
         </div>
-        <div class="col-md-6" v-scrollanimation>
+        <div class="col-md-6" v-scrollanimation style="z-index: 2">
           <span class="img"><img src="../../assets/home.png" alt="" /> </span>
         </div>
       </div>

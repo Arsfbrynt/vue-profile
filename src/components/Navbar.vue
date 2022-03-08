@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container">
+    <div>
       <div class="navbar">
         <vs-tabs alignment="right" class="headers">
           >
@@ -35,8 +35,8 @@
           </header>
         </vs-tabs>
 
-        <div class="navmob">
-          <header class="headert">
+        <div class="navmob container">
+          <header class="headert container">
             <input class="menu-btn" type="checkbox" id="menu-btn" />
             <label class="menu-icon" for="menu-btn"
               ><span class="navicon"></span>
@@ -64,7 +64,7 @@
             <Blogs />
           </div>
 
-          <div class="fw" ref="benefit">
+          <div ref="benefit">
             <div class="custom-shape-divider-bottom-1646585658">
               <svg
                 data-name="Layer 1"
@@ -80,7 +80,7 @@
             </div>
             <Benefit />
           </div>
-          <div class="div" ref="about"><About /></div>
+          <div class="div container" ref="about"><About /></div>
           <div class="div" ref="feat"><Features /></div>
         </div>
       </div>
@@ -220,9 +220,7 @@
     width: 100%;
   }
   .custom-shape-divider-bottom-1646585658 {
-    position: absolute;
-    top: -255px;
-    z-index: -1;
+    margin-top: -255px;
     left: 0;
     width: 100%;
     overflow: hidden;

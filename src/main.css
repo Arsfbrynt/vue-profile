@@ -16,6 +16,12 @@
   h1 {
     font-size: calc(1.325rem + 0.9vw) !important;
   }
+  .green,
+  .mb-2 {
+    float: unset;
+    margin: auto;
+  }
+
   .icon {
     margin-bottom: 50px;
   }

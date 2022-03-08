@@ -53,6 +53,10 @@
         <div class="icon">
           <span>
             <Bebc />
+            <img
+              src="@/assets/icon/basic-elaboration-browser-check.svg"
+              alt=""
+            />
           </span>
           <h5>Single Dashboard</h5>
           <span class="body"
@@ -108,5 +112,7 @@
     margin: auto;
     position: relative;
     margin-bottom: 40px;
+    filter: invert(34%) sepia(12%) saturate(2884%) hue-rotate(73deg)
+      brightness(97%) contrast(98%);
   }
 </style>

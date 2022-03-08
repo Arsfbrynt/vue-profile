@@ -2,6 +2,25 @@
   font-family: "Raleway";
   font-weight: 600;
 }
+#gradient-horizontal {
+  --color-stop-1: #a770ef;
+  --color-stop-2: #cf8bf3;
+  --color-stop-3: #fdb99b;
+}
+#gradient-vertical {
+  --color-stop-1: #00c3ff;
+  --color-stop-2: #77e190;
+  --color-stop-3: #ffff1c;
+}
+
+.icon-hgradient {
+  fill: url(#gradient-horizontal) gray;
+  /* We could use it as a stroke fill too:
+  stroke: url(#gradient-horizontal) gray; */
+}
+.icon-vgradient {
+  fill: url(#gradient-vertical) gray;
+}
 
 @media only screen and (max-width: 600px) {
   .headers {
@@ -41,8 +60,4 @@
   .navmob {
     display: none !important;
   }
-}
-.icon {
-  /* gradient and fallback color */
-  fill: url(#my-cool-gradient) #447799;
 }

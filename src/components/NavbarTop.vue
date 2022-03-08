@@ -13,7 +13,7 @@
             >
               <div></div>
             </vs-tab>
-            <vs-tab class="border" label="Register" @click="goto('')">
+            <vs-tab class="border" label="Register" @click="href('detik.com')">
               <div></div>
             </vs-tab>
           </header>

@@ -26,12 +26,6 @@
             <vs-tab class="last" label="Contact" @click="goto('contact')">
               <div></div>
             </vs-tab>
-
-            <!-- <vs-tab label="🧑">
-              <label>
-                <img src="../assets/icon/user.png" alt="" />
-              </label>
-            </vs-tab> -->
           </header>
         </vs-tabs>
 
@@ -53,8 +47,18 @@
               <li><a href="#" @click="goto('about')">About</a></li>
               <li><a href="#" @click="goto('feat')">Features</a></li>
               <li><a href="#" @click="goto('contact')">Contact</a></li>
-              <li><a href="#">Login</a></li>
-              <li><a href="#">Register</a></li>
+              <li>
+                <a
+                  href="https://zeva.co.id/client-dashboard/demo1/pages/auth/login.html"
+                  >Login</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://zeva.co.id/client-dashboard/demo1/pages/auth/register-plan.html"
+                  >Register</a
+                >
+              </li>
             </ul>
           </header>
         </div>

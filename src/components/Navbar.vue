@@ -64,7 +64,7 @@
             <Blogs />
           </div>
 
-          <div class="fw" ref="benefit">
+          <div ref="benefit">
             <div class="custom-shape-divider-bottom-1646585658">
               <svg
                 data-name="Layer 1"
@@ -220,9 +220,7 @@
     width: 100%;
   }
   .custom-shape-divider-bottom-1646585658 {
-    position: absolute;
-    top: -255px;
-    z-index: -1;
+    margin-top: -255px;
     left: 0;
     width: 100%;
     overflow: hidden;

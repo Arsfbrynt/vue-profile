@@ -52,10 +52,7 @@
       <div class="col-md-2" v-scrollanimation2>
         <div class="icon">
           <span>
-            <img
-              src="@/assets/icon/basic-elaboration-browser-check.svg"
-              alt=""
-            />
+            <Bebc />
           </span>
           <h5>Single Dashboard</h5>
           <span class="body"
@@ -68,11 +65,16 @@
 </template>
 
 <script>
+  import Bebc from "@/assets/icon/basic-elaboration-browser-check.svg"
+
   export default {
     name: "Benefit",
     props: {
       msg: String,
     },
+    components: {
+      Bebc
+    }
   };
 </script>
 

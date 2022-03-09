@@ -38,7 +38,8 @@
       :loop="true"
       :responsive="{
         0: { items: 1 },
-        601: { items: 3 },
+        500: { items: 2 },
+        1001: { items: 3 },
       }"
       v-scrollanimation
     >

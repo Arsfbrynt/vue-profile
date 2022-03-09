@@ -11,20 +11,35 @@
           </span>
 
           <header id="header">
-            <vs-tab label="Home" @click="goto('home')">
-              <div></div>
+            <vs-tab
+              v-bind:class="{ activeChild: menu === 'home' }"
+              label="Home"
+              @click="goto('home')"
+            >
             </vs-tab>
-            <vs-tab label="Benefit" @click="goto2('benefit')">
-              <div></div>
+            <vs-tab
+              v-bind:class="{ activeChild: menu === 'benefit' }"
+              label="Benefit"
+              @click="goto2('benefit')"
+            >
             </vs-tab>
-            <vs-tab label="About" @click="goto('about')">
-              <div></div>
+            <vs-tab
+              v-bind:class="{ activeChild: menu === 'about' }"
+              label="About"
+              @click="goto('about')"
+            >
             </vs-tab>
-            <vs-tab label="Features" @click="goto('feat')">
-              <div></div>
-            </vs-tab>
-            <vs-tab class="last" label="Contact" @click="goto('contact')">
-              <div></div>
+            <vs-tab
+              v-bind:class="{ activeChild: menu === 'feat' }"
+              label="Features"
+              @click="goto('feat')"
+            ></vs-tab>
+            <vs-tab
+              v-bind:class="{ activeChild: menu === 'contact' }"
+              class="last"
+              label="Contact"
+              @click="goto('contact')"
+            >
             </vs-tab>
           </header>
         </vs-tabs>
@@ -121,6 +136,29 @@
 
         window.scrollTo(200, top);
       },
+      handleScroll: function () {
+        if (
+          document.body.scrollTop > 150 ||
+          document.documentElement.scrollTop > 150
+        ) {
+          this.menu = "benefit";
+          console.log("benefit");
+        } else if (
+          document.body.scrollTop > 450 ||
+          document.documentElement.scrollTop > 450
+        ) {
+          this.menu = "about";
+          console.log("about");
+        }
+      },
+    },
+    data() {
+      return {
+        menu: "home",
+      };
+    },
+    beforeMount() {
+      window.addEventListener("scroll", this.handleScroll);
     },
   };
   import Vue from "vue";
@@ -168,6 +206,10 @@
     margin-left: -50vw;
     margin-right: 0vw;
     min-height: 700px;
+  }
+
+  .activeChild {
+    background-color: turquoise !important;
   }
 
   .vs-tabs {
@@ -248,5 +290,10 @@
 
   .custom-shape-divider-bottom-1646585658 .shape-fill {
     fill: #ebf0fc;
+  }
+  .pick::before {
+    width: inherit;
+    height: 5px;
+    background-color: turquoise;
   }
 </style>

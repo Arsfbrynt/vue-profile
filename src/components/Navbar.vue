@@ -144,11 +144,14 @@
           this.menu = "benefit";
           console.log("benefit");
         } else if (
-          document.body.scrollTop > 450 ||
-          document.documentElement.scrollTop > 450
+          document.body.scrollTop + 450 ||
+          document.documentElement.scrollTop + 450
         ) {
           this.menu = "about";
           console.log("about");
+        } else {
+          this.menu = "asw";
+          console.log("asw");
         }
       },
     },
@@ -216,7 +219,6 @@
     position: fixed;
     left: 0;
     top: 0;
-    /* right: 200px !important; */
     width: 100%;
     z-index: 200;
     background-color: white;

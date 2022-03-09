@@ -4,7 +4,16 @@
       <div><NavbarTop msg="" /></div>
       <div><Navbar msg="" /></div>
       <div id="app"></div>
+<<<<<<< HEAD
       <button v-if="isShow" @click="topFunction" id="myBtn" title="Go to top">
+=======
+      <button
+        v-if="isShow"
+        @click="topFunction"
+        id="myBtn"
+        title="Go to top"
+      >
+>>>>>>> 9e331cabdbe5bc2a3febf1310b4789449a5e11fe
         ^
       </button>
     </div>
@@ -25,6 +34,7 @@
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
       },
+<<<<<<< HEAD
       handleScroll: function () {
         if (
           document.body.scrollTop > 50 ||
@@ -43,7 +53,24 @@
     },
     beforeMount() {
       window.addEventListener("scroll", this.handleScroll);
+=======
+      handleScroll: function() {
+        if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          this.isShow = true
+        } else {
+          this.isShow = false
+        }
+      }
+>>>>>>> 9e331cabdbe5bc2a3febf1310b4789449a5e11fe
     },
+    data() {
+      return {
+        isShow: false
+      }
+    },
+    beforeMount() {
+      window.addEventListener('scroll', this.handleScroll)
+    }
   };
 
   // script JS doang :v

@@ -5,7 +5,7 @@
       <div><Navbar msg="" /></div>
       <div id="app"></div>
       <button
-        v-show="!isShow"
+        v-if="isShow"
         @click="topFunction"
         id="myBtn"
         title="Go to top"
@@ -30,7 +30,22 @@
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
       },
+      handleScroll: function() {
+        if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          this.isShow = true
+        } else {
+          this.isShow = false
+        }
+      }
     },
+    data() {
+      return {
+        isShow: false
+      }
+    },
+    beforeMount() {
+      window.addEventListener('scroll', this.handleScroll)
+    }
   };
 
   // script JS doang :v

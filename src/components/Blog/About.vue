@@ -9,7 +9,12 @@
       </div>
     </div>
   </div> -->
-  <b-container fluid class="bv-example-row" v-scrollanimation2>
+  <b-container
+    fluid
+    class="bv-example-row"
+    v-scrollanimation2
+    @scroll="handleScroll"
+  >
     <b-row>
       <b-col sm="12" md="6" offset-md="3" v-scrollanimation>
         <h3 class="center">Integrasi API</h3>

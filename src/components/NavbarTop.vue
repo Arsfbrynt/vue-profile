@@ -6,14 +6,10 @@
           >
 
           <header id="header">
-            <vs-tab
-              class="border"
-              label="Login"
-              href="https://zeva.co.id/client-dashboard/demo1/pages/auth/register-plan.html"
-            >
+            <vs-tab class="border" label="Login" @click="showMore">
               <div></div>
             </vs-tab>
-            <vs-tab class="border" label="Register" @click="href('detik.com')">
+            <vs-tab class="border" label="Register" @click="showMore">
               <div></div>
             </vs-tab>
           </header>
@@ -34,6 +30,10 @@
     }),
 
     methods: {
+      showMore: function () {
+        alert("Pindah link");
+        window.open("https://detik.com");
+      },
       goto(refName) {
         var element = this.$refs[refName];
         var top = element.offsetTop;
@@ -120,6 +120,7 @@
   .headert {
     position: fixed;
     left: 0;
+    background-color: #fff;
     right: 0;
     width: 100%;
     top: 0;

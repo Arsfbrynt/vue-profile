@@ -14,7 +14,7 @@
             <vs-tab label="Home" @click="goto('home')">
               <div></div>
             </vs-tab>
-            <vs-tab label="Benefit" @click="goto('benefit')">
+            <vs-tab label="Benefit" @click="goto2('benefit')">
               <div></div>
             </vs-tab>
             <vs-tab label="About" @click="goto('about')">
@@ -112,6 +112,12 @@
       goto(refName) {
         var element = this.$refs[refName];
         var top = element.offsetTop;
+
+        window.scrollTo(200, top);
+      },
+      goto2(refName) {
+        var element = this.$refs[refName];
+        var top = element.offsetTop + 250;
 
         window.scrollTo(200, top);
       },

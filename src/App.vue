@@ -1,19 +1,17 @@
 <template>
   <div>
     <div>
-      <!-- <div class="accounted">
-        <a
-          href="https://zeva.co.id/client-dashboard/demo1/pages/auth/register-plan.html"
-          >Don’t Have Account? Sign Up Now</a
-        >
-      </div> -->
       <div><NavbarTop msg="" /></div>
       <div><Navbar msg="" /></div>
-      <div id="app">
-        <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
-        <!-- <Compon msg="" /> -->
-        <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-      </div>
+      <div id="app"></div>
+      <button
+        v-show="!isShow"
+        @click="topFunction"
+        id="myBtn"
+        title="Go to top"
+      >
+        ^
+      </button>
     </div>
   </div>
 </template>
@@ -27,7 +25,32 @@
       Navbar,
       NavbarTop,
     },
+    methods: {
+      topFunction: function () {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      },
+    },
   };
+
+  // script JS doang :v
+
+  var btn = document.getElementById("myBtn");
+
+  window.onscroll = function () {
+    scrollFunction();
+  };
+  function scrollFunction() {
+    if (
+      document.body.scrollTop > 20 ||
+      document.documentElement.scrollTop > 20
+    ) {
+      console.log("asw");
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  }
 </script>
 
 <style>
@@ -39,6 +62,21 @@
     margin-top: 200px;
   }
   @import "~bootstrap/dist/css/bootstrap.css";
+  #myBtn {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
 
   .vs-tabs--ul {
     width: 100%;

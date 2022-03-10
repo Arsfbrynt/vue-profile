@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <div class="navbar">
+      <div class="navbar container">
         <vs-tabs alignment="right" v-model="aktif" class="headers">
           >
           <span>
@@ -244,10 +244,10 @@
     padding-top: 0 !important;
   }
   .logo {
-    position: absolute;
+    position: relative;
     top: -110px;
     width: 200px;
-    left: 60px;
+    left: 90px;
   }
 
   span {

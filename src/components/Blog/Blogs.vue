@@ -11,17 +11,17 @@
 
           <span class="img">
             <div class="row">
-              <div class="col-4">
+              <div class="col-4" v-scrollanimation2>
                 <img
                   src="../../assets/logo_ekspedisi/gosend.svg"
                   title="Gosend"
                 />
               </div>
-              <div class="col-4">
+              <div class="col-4" v-scrollanimation>
                 <img src="../../assets/logo_ekspedisi/Grab.svg" title="Grab" />
               </div>
 
-              <div class="col-4">
+              <div class="col-4" v-scrollanimation2>
                 <img
                   src="../../assets/logo_ekspedisi/anteraja.svg"
                   title="Anter Aja"
@@ -29,28 +29,28 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-4">
+              <div class="col-4" v-scrollanimation>
                 <img
                   src="../../assets/logo_ekspedisi/paxxel.svg"
                   title="Paxel"
                 />
               </div>
-              <div class="col-4">
+              <div class="col-4" v-scrollanimation>
                 <img src="../../assets/logo_ekspedisi/jne.svg" title="JNE" />
               </div>
 
-              <div class="col-4">
+              <div class="col-4" v-scrollanimation>
                 <img src="../../assets/logo_ekspedisi/tiki.svg" title="Tiki" />
               </div>
             </div>
             <div class="row">
-              <div class="col-6">
+              <div class="col-6" v-scrollanimation2>
                 <img
                   src="../../assets/logo_ekspedisi/borzo.svg"
                   title="borzo"
                 />
               </div>
-              <div class="col-6">
+              <div class="col-6" v-scrollanimation2>
                 <img
                   src="../../assets/logo_ekspedisi/sicepatt.svg"
                   title="Sicepat"

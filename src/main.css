@@ -25,6 +25,11 @@ body {
 .icon-vgradient {
   fill: url(#gradient-vertical) gray;
 }
+@media only screen and (min-width: 1020px) and (max-width: 1400px) {
+  .logo {
+    left: 125px !important;
+  }
+}
 
 @media only screen and (max-width: 600px) {
   .headers {

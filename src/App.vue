@@ -45,6 +45,15 @@
       window.addEventListener("scroll", this.handleScroll);
     },
   };
+
+  window.addEventListener(
+    "contextmenu",
+    function (e) {
+      e.preventDefault();
+      console.log("cie bisa :v");
+    },
+    false,
+  );
 </script>
 
 <style>
@@ -74,7 +83,10 @@
     border-radius: 50%;
     height: 40px;
   }
-
+  .headers > div > ul {
+    background-color: #f8f8f8 !important;
+    margin-bottom: unset;
+  }
   .vs-tabs--ul {
     width: 100%;
     padding-left: 0;
@@ -92,6 +104,8 @@
   }
   .vs-tabs--li > button > span {
     color: #3e6fe1;
+    font-weight: 600;
+    font-size: 18px;
   }
   .vs-tabs--li > button > span:hover {
     color: #00ab66;
@@ -116,5 +130,8 @@
   .enter {
     opacity: 1;
     transform: translateX(0px);
+  }
+  li.vs-tabs--li {
+    margin: 0 10px;
   }
 </style>

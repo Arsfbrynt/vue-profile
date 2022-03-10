@@ -90,7 +90,7 @@
   }
   .bgbenf {
     background-color: #ebf0fc;
-    padding: 50px 0;
+    padding: 10px 0;
   }
   .icon > h5 {
     font-weight: 600;

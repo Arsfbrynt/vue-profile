@@ -63,7 +63,7 @@
           </b-button>
         </b-card>
       </b-col>
-      <br />
+      <!-- <br /> -->
       <b-col sm="12" md="6" v-scrollanimation>
         <div class="featbot">
           <h5>Pilihan Zevalink yang tersedia</h5>
@@ -185,7 +185,7 @@
   }
   .green {
     display: inline-block;
-    margin-top: 110px;
+    margin-top: 20px;
   }
   .col-md-6 {
     padding: 0 20px !important;
@@ -213,7 +213,7 @@
     display: inline-block;
   }
   .featbot {
-    margin-top: 40px;
+    margin: 40px 60px;
     color: #444;
   }
   .featbot > h5 {

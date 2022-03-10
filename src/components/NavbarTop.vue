@@ -9,7 +9,7 @@
             <vs-tab class="border" label="Login" @click="showMore">
               <div></div>
             </vs-tab>
-            <vs-tab class="border" label="Register" @click="showMore">
+            <vs-tab class="border2" label="Register" @click="showMore">
               <div></div>
             </vs-tab>
           </header>
@@ -86,29 +86,44 @@
   }
 
   .headers2 > div > ul > li > button {
-    border: 1px solid #3e6fe1 !important;
-    margin-top: 20px;
-    height: 35px;
+    margin: 30px;
+    height: 40px;
     padding-top: 5px !important;
     border-radius: 8px;
   }
   .headers2 > div > ul > li > button > span {
-    color: #3e6fe1 !important;
+    color: #fff;
+  }
+  .headers2 > div > ul > li:first-child > button {
+    background-color: #3e6fe1;
+    border: 1px solid #3e6fe1;
+  }
+  .headers2 > div > ul > li:last-child > button {
+    background-color: #00ab66;
+    border: 1px solid #00ab66;
   }
   .headers2 > div > ul > li {
     margin: 0 5px;
   }
   .headers2 > div > ul {
-    margin-top: 5px;
+    padding-top: 15px;
   }
   .headers2 > div > span {
     display: none;
   }
   .headers2 > div > ul > li > button:hover {
-    border: 1px solid #00ab66 !important;
+    background-color: #fff;
+    border: 1px solid #00ab66;
+  }
+
+  .headers2 > div > ul > li:first-child > button:hover {
+    border: 1px solid #3e6fe1;
   }
   .headers2 > div > ul > li > button:hover * {
-    color: #00ab66 !important;
+    color: #00ab66;
+  }
+  .headers2 > div > ul > li:first-child > button:hover * {
+    color: #3e6fe1;
   }
 
   a {
@@ -139,7 +154,17 @@
     display: block;
     padding: 20px 20px;
     border-right: 1px solid #f4f4f4;
+    text-align: center;
     text-decoration: none;
+  }
+
+  .headert li a::after {
+    content: "";
+    width: 60px;
+    margin: 0 auto;
+    background-color: #00ab66;
+    height: 2px;
+    display: block;
   }
 
   .headert li a:hover,
@@ -179,6 +204,7 @@
   .headert .menu-icon .navicon {
     background: #333;
     display: block;
+    float: right;
     height: 2px;
     position: relative;
     transition: background 0.2s ease-out;
@@ -213,7 +239,7 @@
   .headert .menu-btn:checked ~ .menu {
     max-height: 540px;
     z-index: -2;
-    top: -60px;
+    top: 0px;
     position: relative;
   }
 
@@ -254,9 +280,9 @@
   }
 
   .menu-icon > img {
-    width: 30%;
-    margin: 0 28%;
-    margin-top: -30px;
+    width: 35%;
     z-index: 9;
+    margin: 0 30%;
+    margin-top: -30px;
   }
 </style>

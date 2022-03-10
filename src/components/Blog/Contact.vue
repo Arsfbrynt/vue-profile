@@ -1,7 +1,7 @@
 <template>
   <div class="bg">
     <div class="col-md-12">
-      <div class="box-link" v-scrollanimation>
+      <div class="box-link">
         <h6>Zevalink</h6>
         <p>
           Jl. Pecandran No.14, RT.6/RW.5 Rawa Baru, Kec. Kby. Baru, Kota Jakarta

@@ -2,15 +2,19 @@
   font-family: "Raleway";
   font-weight: 600;
 }
-#gradient-horizontal {
-  --color-stop-1: #a770ef;
-  --color-stop-2: #cf8bf3;
-  --color-stop-3: #fdb99b;
+body {
+  display: block;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  /* unselectable: on; */
 }
-#gradient-vertical {
-  --color-stop-1: #00c3ff;
-  --color-stop-2: #77e190;
-  --color-stop-3: #ffff1c;
+
+.line-vs-tabs {
+  top: 33px !important;
 }
 
 .icon-hgradient {
@@ -35,10 +39,19 @@
   h1 {
     font-size: calc(1.325rem + 0.9vw) !important;
   }
+  .bgbenf > h2.center {
+    margin-bottom: 50px;
+  }
   .green,
   .mb-2 {
     float: unset;
     margin: auto;
+  }
+  .box {
+    margin: 0 auto;
+  }
+  .navbar {
+    margin-top: 30px !important;
   }
 
   .icon {

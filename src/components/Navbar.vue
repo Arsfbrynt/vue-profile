@@ -2,7 +2,7 @@
   <div>
     <div>
       <div class="navbar">
-        <vs-tabs alignment="right" class="headers">
+        <vs-tabs alignment="right" v-model="activeChild" class="headers">
           >
           <span>
             <button>
@@ -12,30 +12,35 @@
 
           <header id="header">
             <vs-tab
-              v-bind:class="{ activeChild: menu === 'home' }"
+              :activeChild="activeChild === 'home'"
+              id="home"
               label="Home"
               @click="goto('home')"
             >
             </vs-tab>
             <vs-tab
-              v-bind:class="{ activeChild: menu === 'benefit' }"
+              :activeChild="activeChild === 'benefit'"
+              id="benefit"
               label="Benefit"
               @click="goto2('benefit')"
             >
             </vs-tab>
             <vs-tab
-              v-bind:class="{ activeChild: menu === 'about' }"
+              :activeChild="activeChild === 'about'"
+              id="about"
               label="About"
               @click="goto('about')"
             >
             </vs-tab>
             <vs-tab
-              v-bind:class="{ activeChild: menu === 'feat' }"
+              :activeChild="activeChild === 'feat'"
+              id="feat"
               label="Features"
               @click="goto('feat')"
             ></vs-tab>
             <vs-tab
-              v-bind:class="{ activeChild: menu === 'contact' }"
+              :activeChild="activeChild === 'contact'"
+              id="contact"
               class="last"
               label="Contact"
               @click="goto('contact')"
@@ -44,8 +49,8 @@
           </header>
         </vs-tabs>
 
-        <div class="navmob container">
-          <header class="headert container">
+        <div class="navmob conakuner">
+          <header class="headert conakuner">
             <input class="menu-btn" type="checkbox" id="menu-btn" />
             <label class="menu-icon" for="menu-btn"
               ><span class="navicon"></span>
@@ -99,7 +104,7 @@
             </div>
             <Benefit />
           </div>
-          <div class="div container" ref="about"><About /></div>
+          <div class="div conakuner" ref="about"><About /></div>
           <div class="div" ref="feat"><Features /></div>
         </div>
       </div>
@@ -126,7 +131,7 @@
     methods: {
       goto(refName) {
         var element = this.$refs[refName];
-        var top = element.offsetTop;
+        var top = element.offsetTop - 10;
 
         window.scrollTo(200, top);
       },
@@ -137,27 +142,30 @@
         window.scrollTo(200, top);
       },
       handleScroll: function () {
-        if (
-          document.body.scrollTop > 150 ||
-          document.documentElement.scrollTop > 150
-        ) {
-          this.menu = "benefit";
-          console.log("benefit");
-        } else if (
-          document.body.scrollTop + 450 ||
-          document.documentElement.scrollTop + 450
-        ) {
-          this.menu = "about";
-          console.log("about");
+        var aku = document.body.scrollTop + 1,
+          aku2 = document.documentElement.scrollTop + 1;
+
+        if (10 < aku2 < 740) {
+          this.activeChild = "home";
+          console.log("home" + aku2);
+        } else if (aku2 < 1720) {
+          this.activeChild = "benefit";
+          console.log("benefit" + aku2);
+        } else if (aku2 < 2800) {
+          this.activeChild = "about";
+          console.log("about" + aku2);
+        } else if (aku > 1000 || aku2 > 1000) {
+          this.activeChild = "feat";
+          console.log("feat");
         } else {
-          this.menu = "asw";
-          console.log("asw");
+          this.activeChild = "gg";
+          console.log("gg");
         }
       },
     },
     data() {
       return {
-        menu: "home",
+        activeChild: "home",
       };
     },
     beforeMount() {
@@ -223,24 +231,23 @@
     z-index: 200;
     background-color: white;
   }
+
   .navbar {
     position: relative;
     margin-top: 100px;
   }
   .navbar > div:first-child {
     margin: 0;
-    margin-top: 40px;
+    margin-top: 60px;
     padding-top: 0 !important;
   }
   .logo {
     position: absolute;
-    top: -80px;
+    top: -110px;
     width: 200px;
-    left: 20px;
+    left: 60px;
   }
-  .line-vs-tabs {
-    top: 60px !important;
-  }
+
   span {
     position: fixed;
   }
@@ -254,9 +261,6 @@
   }
   div.con-ul-tabs > ul {
     height: 60px !important;
-  }
-  .vs-tabs--li {
-    top: 15px;
   }
   .component {
     width: 100%;
@@ -296,6 +300,6 @@
   .pick::before {
     width: inherit;
     height: 5px;
-    background-color: turquoise;
+    background-color: rgb(79, 110, 107);
   }
 </style>

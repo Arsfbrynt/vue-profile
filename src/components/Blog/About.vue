@@ -32,13 +32,13 @@
     <br />
 
     <carousel
-      :autoplay="true"
+      :autoplay="false"
       :margin="90"
       :nav="false"
-      :loop="true"
+      :loop="false"
       :responsive="{
         0: { items: 1 },
-        500: { items: 2 },
+        699: { items: 2 },
         1001: { items: 3 },
       }"
       v-scrollanimation
@@ -146,6 +146,7 @@
   .box {
     width: 300px;
     height: 400px;
+    margin: auto;
   }
   .owl-dot > span {
     background: #82a3f0 !important;
@@ -167,18 +168,7 @@
   .box:hover * {
     color: #fff !important;
   }
-  #home:hover {
-    background-image: url(../../assets/icon/address.jpg);
-  }
-  #clac:hover {
-    background-image: url(../../assets/icon/tarif.jpg);
-  }
-  #window:hover {
-    background-image: url(../../assets/icon/tracking.jpg);
-  }
-  #maps:hover {
-    background-image: url(../../assets/icon/api.jpg);
-  }
+
   .offset-md-3 {
     text-align: center;
   }

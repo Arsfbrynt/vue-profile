@@ -2,7 +2,7 @@
   <div>
     <div>
       <div class="navbar">
-        <vs-tabs alignment="right" v-model="activeChild" class="headers">
+        <vs-tabs alignment="right" v-model="aktif" class="headers">
           >
           <span>
             <button>
@@ -83,7 +83,7 @@
           </header>
         </div>
 
-        <div class="component">
+        <div class="component" style="overflow: hidden">
           <div class="div" ref="home">
             <Blogs />
           </div>
@@ -104,7 +104,7 @@
             </div>
             <Benefit />
           </div>
-          <div class="div conakuner" ref="about"><About /></div>
+          <div class="div" ref="about"><About /></div>
           <div class="div" ref="feat"><Features /></div>
         </div>
       </div>
@@ -140,32 +140,34 @@
         var top = element.offsetTop + 250;
 
         window.scrollTo(200, top);
+        // window.scrollTop({ tops, behavior: "smooth" });
       },
       handleScroll: function () {
-        var aku = document.body.scrollTop + 1,
+        var // aku = document.body.scrollTop + 1,
           aku2 = document.documentElement.scrollTop + 1;
 
-        if (10 < aku2 < 740) {
-          this.activeChild = "home";
+        if (aku2 > 0 && aku2 < 614) {
+          this.aktif = 0;
           console.log("home" + aku2);
-        } else if (aku2 < 1720) {
-          this.activeChild = "benefit";
+        } else if (aku2 > 614 && aku2 < 1200) {
+          this.aktif = 1;
           console.log("benefit" + aku2);
-        } else if (aku2 < 2800) {
-          this.activeChild = "about";
+        } else if (aku2 > 1200 && aku2 < 1930) {
+          this.aktif = 2;
           console.log("about" + aku2);
-        } else if (aku > 1000 || aku2 > 1000) {
-          this.activeChild = "feat";
-          console.log("feat");
-        } else {
-          this.activeChild = "gg";
-          console.log("gg");
+        } else if (aku2 > 1930 && aku2 < 2900) {
+          this.aktif = 3;
+          console.log("features" + aku2);
+        } else if (aku2 > 2900 && aku2 < 9900) {
+          this.aktif = 4;
+          console.log("kntl");
         }
       },
     },
     data() {
       return {
         activeChild: "home",
+        aktif: 0,
       };
     },
     beforeMount() {

@@ -16,7 +16,7 @@
     @scroll="handleScroll"
   >
     <b-row>
-      <b-col sm="12" md="6" offset-md="3" v-scrollanimation>
+      <b-col sm="12" md="6" offset-md="3">
         <h3 class="center">Integrasi API</h3>
         <span class="line center"></span>
         <span class="text"
@@ -41,7 +41,7 @@
         699: { items: 2 },
         1001: { items: 3 },
       }"
-      v-scrollanimation
+      v-scrollanimation2
     >
       <span>
         <div class="box" id="home">

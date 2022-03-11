@@ -93,8 +93,12 @@
   }
   .img > .row > .col-6 > img {
     padding: 0 20px;
+    z-index: 999999;
   }
   .img > .row > .col-6:last-child > img {
     margin-top: -10px;
+  }
+  .col-md-6 {
+    z-index: 9;
   }
 </style>

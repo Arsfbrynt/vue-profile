@@ -1,6 +1,6 @@
 <template>
   <div class="bgbenf">
-    <h2 class="center" v-scrollanimation2>Kenapa menggunakan Zevalink</h2>
+    <h2 class="center" v-scrollanimation>Kenapa menggunakan Zevalink</h2>
     <div class="row center" style="margin: 0 !important">
       <div class="col-md-2" v-scrollanimation2>
         <div class="icon">

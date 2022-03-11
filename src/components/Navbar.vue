@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <div class="navbar container">
+      <div class="navbar">
         <vs-tabs alignment="right" v-model="aktif" class="headers">
           >
           <span>
@@ -11,40 +11,11 @@
           </span>
 
           <header id="header">
-            <vs-tab
-              :activeChild="activeChild === 'home'"
-              id="home"
-              label="Home"
-              @click="goto('home')"
-            >
-            </vs-tab>
-            <vs-tab
-              :activeChild="activeChild === 'benefit'"
-              id="benefit"
-              label="Benefit"
-              @click="goto2('benefit')"
-            >
-            </vs-tab>
-            <vs-tab
-              :activeChild="activeChild === 'about'"
-              id="about"
-              label="About"
-              @click="goto('about')"
-            >
-            </vs-tab>
-            <vs-tab
-              :activeChild="activeChild === 'feat'"
-              id="feat"
-              label="Features"
-              @click="goto('feat')"
-            ></vs-tab>
-            <vs-tab
-              :activeChild="activeChild === 'contact'"
-              id="contact"
-              class="last"
-              label="Contact"
-              @click="goto('contact')"
-            >
+            <vs-tab label="Home" @click="goto('home')"> </vs-tab>
+            <vs-tab label="Benefit" @click="goto2('benefit')"> </vs-tab>
+            <vs-tab label="About" @click="goto('about')"> </vs-tab>
+            <vs-tab label="Features" @click="goto('feat')"></vs-tab>
+            <vs-tab class="last" label="Contact" @click="goto('contact')">
             </vs-tab>
           </header>
         </vs-tabs>
@@ -59,14 +30,14 @@
 
             <ul class="menu">
               <li>
-                <a href="#" @click="goto('home')">Home</a>
+                <a @click="goto('home')">Home</a>
               </li>
               <li>
-                <a href="#" @click="goto('benefit')">Benefit</a>
+                <a @click="goto2('benefit')">Benefit</a>
               </li>
-              <li><a href="#" @click="goto('about')">About</a></li>
-              <li><a href="#" @click="goto('feat')">Features</a></li>
-              <li><a href="#" @click="goto('contact')">Contact</a></li>
+              <li><a @click="goto('about')">About</a></li>
+              <li><a @click="goto('feat')">Features</a></li>
+              <li><a @click="goto('contact')">Contact</a></li>
               <li>
                 <a
                   href="https://zeva.co.id/client-dashboard/demo1/pages/auth/login.html"
@@ -104,7 +75,7 @@
             </div>
             <Benefit />
           </div>
-          <div class="div" ref="about"><About /></div>
+          <div class="div container" ref="about"><About /></div>
           <div class="div" ref="feat"><Features /></div>
         </div>
       </div>
@@ -131,15 +102,17 @@
     methods: {
       goto(refName) {
         var element = this.$refs[refName];
-        var top = element.offsetTop - 10;
+        var tops = element.offsetTop - 10;
 
-        window.scrollTo(200, top);
+        window.scroll({ top: tops, behavior: "smooth" });
+
+        // window.scrollTo(200, top);
       },
       goto2(refName) {
         var element = this.$refs[refName];
-        var top = element.offsetTop + 250;
+        var tops = element.offsetTop + 250;
 
-        window.scrollTo(200, top);
+        window.scroll({ top: tops, behavior: "smooth" });
         // window.scrollTop({ tops, behavior: "smooth" });
       },
       handleScroll: function () {
@@ -148,25 +121,19 @@
 
         if (aku2 > 0 && aku2 < 614) {
           this.aktif = 0;
-          console.log("home" + aku2);
         } else if (aku2 > 614 && aku2 < 1200) {
           this.aktif = 1;
-          console.log("benefit" + aku2);
         } else if (aku2 > 1200 && aku2 < 1930) {
           this.aktif = 2;
-          console.log("about" + aku2);
-        } else if (aku2 > 1930 && aku2 < 2900) {
+        } else if (aku2 > 1930 && aku2 < 2800) {
           this.aktif = 3;
-          console.log("features" + aku2);
-        } else if (aku2 > 2900 && aku2 < 9900) {
+        } else if (aku2 > 2800 && aku2 < 9900) {
           this.aktif = 4;
-          console.log("kntl");
         }
       },
     },
     data() {
       return {
-        activeChild: "home",
         aktif: 0,
       };
     },
@@ -176,7 +143,6 @@
   };
   import Vue from "vue";
   import Vuesax from "vuesax";
-  //   import Compon from "./Compon.vue";
 
   import About from "./Blog/About.vue";
   import Blogs from "./Blog/Blogs.vue";
@@ -199,7 +165,6 @@
   }
   .bg {
     margin: 0 !important;
-    /* width: 97.8%; */
     left: 0px !important;
   }
   button {
@@ -234,6 +199,14 @@
     background-color: white;
   }
 
+  .headert > ul > li > a {
+    color: #3e6fe1;
+  }
+  .headert > ul > li > a:not([href]):not([class]),
+  a:not([href]):not([class]):hover {
+    color: #3e6fe1 !important;
+  }
+
   .navbar {
     position: relative;
     margin-top: 100px;
@@ -266,6 +239,11 @@
   }
   .component {
     width: 100%;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    -webkit-scroll-behavior: smooth;
+    -moz-scroll-behavior: smooth;
+    -o-scroll-behavior: smooth;
   }
   .component > div {
     min-height: 700px;

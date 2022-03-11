@@ -1,6 +1,10 @@
 * {
   font-family: "Raleway";
   font-weight: 600;
+  scroll-behavior: smooth;
+  -webkit-scroll-behavior: smooth;
+  -moz-scroll-behavior: smooth;
+  -o-scroll-behavior: smooth;
 }
 body {
   display: block;
@@ -9,6 +13,7 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   -o-user-select: none;
+
   user-select: none;
   /* unselectable: on; */
 }
@@ -37,6 +42,10 @@ body {
   }
   .headers2 {
     display: none !important;
+    color: salmon;
+  }
+  .col-md-6 > h1 {
+    text-align: center;
   }
   .navmob {
     display: block !important;

@@ -184,7 +184,7 @@
     font-size: 14px;
   }
   .green {
-    display: inline-block;
+    display: block;
     margin-top: 20px;
   }
   .col-md-6 {

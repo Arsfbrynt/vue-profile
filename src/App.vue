@@ -22,8 +22,7 @@
     },
     methods: {
       topFunction: function () {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
+        window.scroll({ top: 0, behavior: "smooth" });
       },
       handleScroll: function () {
         if (

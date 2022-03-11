@@ -8,9 +8,11 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 import ScrollAnimation from "./directives/scrollanimation";
 import ScrollAnimation2 from "./directives/scrollanimation2";
+import smoothscroll from "smoothscroll-polyfill";
 
 Vue.directive("scrollanimation", ScrollAnimation);
 Vue.directive("scrollanimation2", ScrollAnimation2);
+smoothscroll.polyfill();
 
 Vue.directive("scroll", {
   inserted: function (el, binding) {

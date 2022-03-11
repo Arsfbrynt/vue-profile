@@ -88,7 +88,7 @@
           <span class="iconfa">
             <fa-icon :icon="['fas', 'location-dot']" />
           </span>
-          <h4>Validasi Alamat Dengan API Pengiriman Kami</h4>
+          <h4>Update Status Paket Dengan API Pengiriman Kami</h4>
           <p>
             Dapatkan informasi update pengiriman secara real-time sehingga Anda
             tahu persis di mana paket Anda berada dan kapan akan tiba. Kemampuan
